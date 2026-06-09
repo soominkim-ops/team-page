@@ -1,3 +1,5 @@
+import ConsultationForm from "./components/ConsultationForm";
+
 export default function Home() {
   const works = [
     {
@@ -176,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA ────────────────────────────────────────── */}
+      {/* ── CTA / 상담 폼 ──────────────────────────────── */}
       <section id="contact" style={{
         maxWidth: "1200px",
         margin: "0 auto",
@@ -187,7 +189,6 @@ export default function Home() {
           border: "1px solid var(--color-bg-input)",
           borderRadius: "var(--radius-lg)",
           padding: "var(--space-6)",
-          textAlign: "center",
           position: "relative",
           overflow: "hidden",
         }}>
@@ -197,40 +198,35 @@ export default function Home() {
             top: "-60px",
             left: "50%",
             transform: "translateX(-50%)",
-            width: "300px",
+            width: "400px",
             height: "150px",
-            background: "radial-gradient(ellipse, rgba(145,70,255,0.25) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(145,70,255,0.2) 0%, transparent 70%)",
             pointerEvents: "none",
           }} />
 
-          <h2 style={{
-            fontSize: "24px",
-            fontWeight: 600,
-            color: "var(--color-text-base)",
-            lineHeight: "32px",
-            letterSpacing: "-0.01em",
-            marginBottom: "var(--space-2)",
-            position: "relative",
-          }}>
-            협업 또는 문의가 있으신가요?
-          </h2>
-
-          <p style={{
-            fontSize: "13px",
-            color: "var(--color-text-alt)",
-            lineHeight: "18px",
-            marginBottom: "var(--space-5)",
-            position: "relative",
-          }}>
-            팀 업무와 관련된 궁금한 사항을 언제든지 보내주세요.
-          </p>
-
-          <a href="mailto:soomin.kim@wyattcorp.com" className="twitch-btn" style={{ position: "relative" }}>
-            문의하기
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+          <div style={{ position: "relative", maxWidth: "600px", margin: "0 auto" }}>
+            <h2 style={{
+              fontSize: "24px",
+              fontWeight: 600,
+              color: "var(--color-text-base)",
+              lineHeight: "32px",
+              letterSpacing: "-0.01em",
+              marginBottom: "var(--space-2)",
+              textAlign: "center",
+            }}>
+              상담 신청
+            </h2>
+            <p style={{
+              fontSize: "13px",
+              color: "var(--color-text-alt)",
+              lineHeight: "18px",
+              marginBottom: "var(--space-5)",
+              textAlign: "center",
+            }}>
+              팀 업무와 관련된 궁금한 사항을 남겨주시면 빠르게 연락드리겠습니다.
+            </p>
+            <ConsultationForm />
+          </div>
         </div>
       </section>
 
